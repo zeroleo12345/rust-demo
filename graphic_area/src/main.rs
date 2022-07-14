@@ -1,12 +1,14 @@
 mod graphic;
-use graphic::{AreaCalculable, Circle};
+use graphic::{AreaCalculable, Circle, Triangle};
 
 fn print_area <T: AreaCalculable> (graphic: T) {
     let area = graphic.calculate_area();
-    println!("area: {area}");
+    println!("This graphic area is: {area}");
 }
 
 fn main() {
     let circle = Circle{r: 3.0};
     print_area(circle);
+    let triangle = Triangle{a: 3.0, h: 5.0};
+    print_area(triangle);
 }
