@@ -1,5 +1,3 @@
-// 正方形: 边长 * 边长
-
 pub trait AreaCalculable {
     fn calculate_area(self) -> f32;
 }
@@ -24,5 +22,16 @@ impl AreaCalculable for Triangle {
     // 三角形: 1/2 * 底 * 高
     fn calculate_area(self) -> f32 {
         return 1.0 / 2.0 * self.a * self.h;
+    }
+}
+
+pub struct Square {
+    pub a: f32,
+}
+
+impl AreaCalculable for Square {
+    // 正方形: 边长 * 边长
+    fn calculate_area(self) -> f32 {
+        return self.a * self.a;
     }
 }
