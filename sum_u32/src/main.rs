@@ -1,6 +1,6 @@
 fn sum(numbers: &[u32]) -> Option<u32> {
     let mut total: u32 = 0;
-    for num in numbers.iter() {
+    for num in numbers {
         print!(" + {} ", *num);
         match total.checked_add(*num) {
             Some(value) => {
